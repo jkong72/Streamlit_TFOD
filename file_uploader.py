@@ -4,7 +4,13 @@ from PIL import Image
 import os
 
 def file_uploader():
-    st.write ('파일 업로드 기능이 들어갈 곳입니다.')
+    st.markdown ('#### 이미지를 업로드해주세요')
+    temp_dir = 'D:\\TFOD example\\Streamlit_TFOD\\temp'
+
+    file_list = os.listdir(temp_dir) 
+    if len(file_list) > 0: # 경로 내부에 파일이 있을 때
+        for file in file_list:
+            os.remove (temp_dir+'\\'+file)
 
     def save_uploaded_file(directory, file) :
         if not os.path.exists(directory):
@@ -13,7 +19,7 @@ def file_uploader():
             f.write(file.getbuffer())
         return st.success (f'{file.name} 파일을 {directory} 경로에 저장하는데 성공했습니다.')
 
-    image_file = st.file_uploader('이미지 업로드', type = ['png', 'jpg', 'jpeg'])
+    image_file = st.file_uploader('', type = ['png', 'jpg', 'jpeg'])
     if image_file is not None :
         current_time = dt.now()
         current_time = current_time.isoformat().replace(':', '-')
