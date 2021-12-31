@@ -3,7 +3,7 @@ from datetime import datetime as dt
 from PIL import Image
 import os
 
-def file_uploader():
+def image_uploader():
     st.markdown ('#### 이미지를 업로드해주세요')
     temp_dir = 'D:\\TFOD example\\Streamlit_TFOD\\temp'
 
