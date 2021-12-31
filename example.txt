@@ -1,0 +1,11 @@
+예시로 사용 가능한 url 링크
+
+이미지 url
+오류 예시 (픽사베이)
+https://cdn.pixabay.com/photo/2021/12/07/21/17/sheep-6854087_960_720.jpg
+
+https://images.unsplash.com/photo-1634609244256-00d1685f89f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80
+
+
+동영상 url
+https://www.youtube.com/watch?v=UT5F9AXjwhg

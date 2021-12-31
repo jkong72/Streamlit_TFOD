@@ -62,5 +62,9 @@ def video_uploader ():
 
         vid_dir = temp_dir + '/' + video_file.name
         video = open(str(vid_dir), 'rb')
-        st.video(video)        
+        st.video(video)
+        print ('-'*15)
+        print (video)
+        print ('-'*15)
+        return video_file.name
     pass
