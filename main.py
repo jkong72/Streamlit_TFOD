@@ -74,20 +74,12 @@ def main() :
                 st.error ('다른 사람의 이미지나 영상을 이용하는 경우 신중하게 이용해주세요.')
                 image_url = st.text_input('')
                 if image_url != '' :
-
                     st.image (image_url)
-                    if image_url != image_url:
-                        file_list = os.listdir(temp_dir) 
-                        if len(file_list) > 0: # 경로 내부에 파일이 있을 때
-                            for file in file_list:
-                                os.remove (temp_dir+'\\'+file) # 내부의 파일을 삭제
 
                 else:
                     st.write ('현재 이미지 없음')
 
                 if st.button ('이 이미지 사용'):
-                    
-
                     image_downloader(image_url, temp_dir)
                     
 
