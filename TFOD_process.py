@@ -14,7 +14,7 @@ from object_detection.utils import label_map_util
 from object_detection.utils import visualization_utils as viz_utils
 
 
-def TFOD_image (image, model_url, thought):
+def TFOD_image (model_url, thought):
     st.markdown('---')
 
     # 로컬에 설치된 레이블 파일을 인덱스와 연결
@@ -86,3 +86,7 @@ def TFOD_image (image, model_url, thought):
             min_score_thresh=thought/100,
             agnostic_mode=False)
         return image_np_with_detections
+
+
+def TFOD_video ():
+    pass
