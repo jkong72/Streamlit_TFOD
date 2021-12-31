@@ -6,7 +6,7 @@ import os
 def image_uploader():
     st.markdown ('#### 이미지를 업로드해주세요')
     st.markdown ('##### .png .jpg .jpeg 파일을 지원합니다.')
-    temp_dir = 'D:\\TFOD example\\Streamlit_TFOD\\temp'
+    temp_dir = 'temp'
 
     file_list = os.listdir(temp_dir) 
     if len(file_list) > 0: # 경로 내부에 파일이 있을 때
@@ -37,7 +37,7 @@ def image_uploader():
 def video_uploader ():
     st.markdown ('#### 동영상을 업로드해주세요')
     st.markdown ('##### .avi .mp4 .wmv 파일을 지원합니다.')
-    temp_dir = 'D:\\TFOD example\\Streamlit_TFOD\\temp'
+    temp_dir = 'temp'
 
     file_list = os.listdir(temp_dir) 
     if len(file_list) > 0: # 경로 내부에 파일이 있을 때

@@ -4,7 +4,7 @@ import os
 def main() :
 
 
-    vid_dir = 'D:\\TFOD example\\Streamlit_TFOD\\temp\\out.avi'
+    vid_dir = 'temp\\out.avi'
     video = open(str(vid_dir), 'rb')
     st.video(video)
     print ('-'*15)

@@ -53,11 +53,11 @@ def main() :
         st.title('컴퓨터 비전 프로젝트')
 
         # 파일 업로드
-        dir_list = __file__.split('\\')
-        temp_dir = '\\'.join(dir_list[:-1])
-        temp_dir = temp_dir +'\\'+ 'temp'
-        temp_dir = temp_dir.replace('\\', '\\\\')
-        # temp_dir = 'D:\\TFOD example\\Streamlit_TFOD\\temp' # 파일 경로
+        # dir_list = __file__.split('\\')
+        # temp_dir = '\\'.join(dir_list[:-1])
+        # temp_dir = temp_dir +'\\'+ 'temp'
+        # temp_dir = temp_dir.replace('\\', '\\\\')
+        temp_dir = 'temp' # 파일 경로
 
         st.markdown('## 업로드 방식 선택')
         upload_type = ['컴퓨터에서 업로드', '링크에서 업로드']
