@@ -57,5 +57,5 @@ Object Detection 과정이 끝난 파일을 다운로드 및 저장하는 기능
 Object Detection 과정을 거친 시간 출력 기능 추가   
 Object Detection 작업중임을 알릴 수 있는 진행 상태바 따위를 추가   
 Object Detection 과정 전 현재 모델과, 모델의 성능. 이를 바탕으로한 작업 시간 예측   
-보다 이용자 친화적인 UI개선   
+제목이나 위젯 수정을 통해 보다 이용자 친화적인 UI개선   
 
