@@ -8,22 +8,24 @@
 
 ##### 왼쪽 사이드바 메뉴 (날개)에서 메뉴와 인공지능 모델, 시각화할 예측 확률을 설정할 수 있습니다.
 ---
-![image](https://user-images.githubusercontent.com/96038721/147878732-46ecc509-441a-4449-a477-a3011e75a4ab.png)
-
+---
 **평균 모델**은 중간정도의 성능과 정확도를 가진 모델입니다.
 ###### SSD ResNet101 V1 FPN 1024x1024 (RetinaNet101) 모델 사용
-    
+
+![image](https://user-images.githubusercontent.com/96038721/147878732-46ecc509-441a-4449-a477-a3011e75a4ab.png)  
+
 ---
-    
-![image](https://user-images.githubusercontent.com/96038721/147878930-aadbcd8a-678c-4bc1-82d0-8f038a6ceda8.png)
 **고속 저품질 모델**은 정확도가 낮지만 빠르게 작동합니다.
 ###### SSD MobileNet v2 320x320 모델 사용   
-   
+
+![image](https://user-images.githubusercontent.com/96038721/147878930-aadbcd8a-678c-4bc1-82d0-8f038a6ceda8.png)
+
 ---
-    
-![image](https://user-images.githubusercontent.com/96038721/147878999-b79c73dd-410d-449c-b9a9-30f3dac746b3.png)
 **저속 고정밀 모델**은 작업속도가 느린 대신 보다 정확한 결과를 제공합니다.
 ###### CenterNet HourGlass104 1024x1024 모델 사용
+
+![image](https://user-images.githubusercontent.com/96038721/147878999-b79c73dd-410d-449c-b9a9-30f3dac746b3.png)
+
 ---
 ~~##### 그 외에도 TensorFlow 2 Detection Model Zoo의 다른 모델의 주소를 **직접 입력**할 수 있습니다.
 https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md
@@ -38,16 +40,17 @@ https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc
 컴퓨터에 저장된 파일을 직접 업로드하거나, url주소를 이용할 수 있습니다.   
 .png, .jpg, .jpeg 형식의 정지 영상을 업로드 할 수 있습니다.   
 .avi, .mp4, .wmv 형식의 동영상을 업로드 할 수 있습니다.   
-    
-![image](https://user-images.githubusercontent.com/96038721/147879056-6cabf4e9-9a8f-4224-b07f-986a055a4342.png)
+
 일부 url은 보안상 반려됩니다. (HTTP 403 Error)
+![image](https://user-images.githubusercontent.com/96038721/147879056-6cabf4e9-9a8f-4224-b07f-986a055a4342.png)
+
 
 동영상 url은 현재 YouTube만 가능합니다.
 
 ---
 그 외 로드맵
 ---
-~~적절하지 못한 버튼 등장 개선 (완료됨)~~   
+버튼 등 위젯 중 일부의 부적절한 표시 수정 (부분적으로 완료됨)   
 모델 직접 입력 기능 개선 (진행중)   
 Object Detection 과정을 거친 동영상 파일을 바로 확인할 수 있게끔 개선 (진행중)   
 Object Detection 과정이 끝난 파일을 다운로드 및 저장하는 기능 추가   
@@ -55,3 +58,4 @@ Object Detection 과정을 거친 시간 출력 기능 추가
 Object Detection 작업중임을 알릴 수 있는 진행 상태바 따위를 추가   
 Object Detection 과정 전 현재 모델과, 모델의 성능. 이를 바탕으로한 작업 시간 예측   
 보다 이용자 친화적인 UI개선   
+
