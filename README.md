@@ -25,12 +25,12 @@ https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc
 ####현재 해당 기능의 결함이 확인되어 수정중에 있습니다.
 
 ---
-각 모델은 처음 실행할 때 모델을 다운로드 하는 시간이 추가로 소요되며 경우에 따라 재실행해야 할 수도 있습니다.
-다음 동작부터는 보다 빨라집니다.
-정지 영상(그림 및 사진)과 동영상을 분석할 수 있으며
-컴퓨터에 저장된 파일을 직접 업로드하거나, url주소를 이용할 수 있습니다.
-.png, .jpg, .jpeg 형식의 정지 영상을 업로드 할 수 있습니다.
-.avi, .mp4, .wmv 형식의 동영상을 업로드 할 수 있습니다.
+각 모델은 처음 실행할 때 모델을 다운로드 하는 시간이 추가로 소요되며 경우에 따라 재실행해야 할 수도 있습니다.   
+다음 동작부터는 보다 빨라집니다.   
+정지 영상(그림 및 사진)과 동영상을 분석할 수 있으며   
+컴퓨터에 저장된 파일을 직접 업로드하거나, url주소를 이용할 수 있습니다.   
+.png, .jpg, .jpeg 형식의 정지 영상을 업로드 할 수 있습니다.   
+.avi, .mp4, .wmv 형식의 동영상을 업로드 할 수 있습니다.   
     
 일부 url은 보안상 반려됩니다. (HTTP 403 Error)
 
@@ -39,10 +39,10 @@ https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc
 ---
 그 외 로드맵
 ---
-~~적절하지 못한 버튼 등장 개선 (완료됨)~~
-모델 직접 입력 기능 개선 (진행중)
-Object Detection 과정을 거친 동영상 파일을 바로 확인할 수 있게끔 개선 (진행중)
-Object Detection 과정이 끝난 파일을 다운로드 및 저장하는 기능 추가
-Object Detection 과정을 거친 시간 출력 기능 추가
-Object Detection 작업중임을 알릴 수 있는 진행 상태바 따위를 추가
-보다 이용자 친화적인 UI개선
+~~적절하지 못한 버튼 등장 개선 (완료됨)~~   
+모델 직접 입력 기능 개선 (진행중)   
+Object Detection 과정을 거친 동영상 파일을 바로 확인할 수 있게끔 개선 (진행중)   
+Object Detection 과정이 끝난 파일을 다운로드 및 저장하는 기능 추가   
+Object Detection 과정을 거친 시간 출력 기능 추가   
+Object Detection 작업중임을 알릴 수 있는 진행 상태바 따위를 추가   
+보다 이용자 친화적인 UI개선   
