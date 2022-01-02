@@ -27,7 +27,7 @@
 ![image](https://user-images.githubusercontent.com/96038721/147878999-b79c73dd-410d-449c-b9a9-30f3dac746b3.png)
 
 ---
-#### 현재 해당 기능의 결함이 확인되어 수정중에 있습니다.
+#### 현재 아래 기능의 결함이 확인되어 수정중에 있습니다.
 ~~##### 그 외에도 TensorFlow 2 Detection Model Zoo의 다른 모델의 주소를 **직접 입력**할 수 있습니다.~~
 ~~https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md~~
 
