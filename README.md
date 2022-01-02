@@ -27,11 +27,11 @@
 ![image](https://user-images.githubusercontent.com/96038721/147878999-b79c73dd-410d-449c-b9a9-30f3dac746b3.png)
 
 ---
-~~##### 그 외에도 TensorFlow 2 Detection Model Zoo의 다른 모델의 주소를 **직접 입력**할 수 있습니다.
-https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md
+####현재 해당 기능의 결함이 확인되어 수정중에 있습니다.
+~~##### 그 외에도 TensorFlow 2 Detection Model Zoo의 다른 모델의 주소를 **직접 입력**할 수 있습니다.~~
+~~https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md~~
 
 ~~**링크 주소 복사**를 통해 **url**을 가져와야 한다는 점을 기억하세요.~~
-####현재 해당 기능의 결함이 확인되어 수정중에 있습니다.
 
 ---
 각 모델은 처음 실행할 때 모델을 다운로드 하는 시간이 추가로 소요되며 경우에 따라 재실행해야 할 수도 있습니다.   
