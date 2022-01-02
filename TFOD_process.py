@@ -123,12 +123,14 @@ def TFOD_video (model_url, pred_pcnt, temp_dir):
 
 
     # 비디오를 실행하는 코드
-    video_dir = 'D:/TFOD example/Streamlit_TFOD/temp/'
+    video_dir = 'temp'
     files = os.listdir(temp_dir)
     file_dir = video_dir +'/'+ files[0]
+    # print ('-'*15)
+    # print (video_dir)
+    # print (file_dir)
 
     cap = cv2.VideoCapture(file_dir) # 비디오가 위치한 경로
-    # cap = cv2.VideoCapture(0) # on cam
     category_index = label_map_util.create_category_index_from_labelmap(PATH_TO_LABELS,
                                                                     use_display_name=True)
 
@@ -140,7 +142,7 @@ def TFOD_video (model_url, pred_pcnt, temp_dir):
         frame_width = int(cap.get(3))
         frame_height = int(cap.get(4))
         
-        out = cv2.VideoWriter(video_dir+'out.avi', # 출력 경로
+        out = cv2.VideoWriter(video_dir+'/out.avi', # 출력 경로
             cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'),
             20, # FPS
             (frame_width, frame_height))

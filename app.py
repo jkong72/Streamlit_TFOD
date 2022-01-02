@@ -64,10 +64,12 @@ def main() :
 
             if upload_sel == upload_type[0]: #로컬 이미지 업로드
                 image_uploader()
+
             elif upload_sel == upload_type[1]: #링크 이미지 업로드
                 st.markdown('##### 이미지 링크 입력')
                 st.error ('현재 이용중인 서비스는 외부 이미지나 영상의 권리를 보장하거나 이용상 책임을 지지 않습니다.')
                 st.error ('다른 사람의 이미지나 영상을 이용하는 경우 신중하게 이용해주세요.')
+
                 image_url = st.text_input('')
                 if image_url != '' :
                     st.image (image_url)
@@ -87,6 +89,7 @@ def main() :
             elif upload_sel == upload_type[1]: #링크 동영상 업로드
                 st.error ('현재 이용중인 서비스는 외부 이미지나 영상의 권리를 보장하거나 이용상 책임을 지지 않습니다.')
                 st.error ('다른 사람의 이미지나 영상을 이용하는 경우 신중하게 이용해주세요.')
+
                 st.markdown('##### 동영상 링크 입력 (현재 You Tube만 지원)')
                 video_url = st.text_input('')
                 if video_url != '':
@@ -109,19 +112,14 @@ def main() :
 
                 else:
                     TFOD_video (model_url, pred_pcnt, temp_dir)
-                    # out_list = os.listdir(temp_dir)
-                    # out = os.listdir(temp_dir).index('out.avi')
-                    # out_file = temp_dir +'/'+ out_list[out]
-                    # out_video = open(str(out_file), 'rb')
-                    # print (out_video)
 
-                    vid_dir = temp_dir + '/' + 'out.avi'
+                    vid_dir = temp_dir + '/out.avi'
                     video = open(str(vid_dir), 'rb')
-                    print ('-'*15)
-                    print ('아웃풋')
-                    print (video)
-                    print ('-'*15)
                     st.video(video)
+
+        
+        # 다운로드
+
                     
     else:
         about_show()
