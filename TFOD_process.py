@@ -13,7 +13,7 @@ from object_detection.utils import ops as utils_ops
 from object_detection.utils import label_map_util
 from object_detection.utils import visualization_utils as viz_utils
 
-from TFOD_video import video_taker
+from TFOD_video_render import TFOD_video_render
 
 
 #사전 정의 함수
@@ -41,7 +41,9 @@ def load_model(model_dir):
 
 def load_image_into_numpy_array(path):
     return cv2.imread(str(path)) # opencv이용.
-
+##########################################################################################
+##########################################################################################
+##########################################################################################
 
 # 기능 실행 함수
 def TFOD_image (model_url, pred_pcnt):
@@ -54,8 +56,8 @@ def TFOD_image (model_url, pred_pcnt):
     model_name = url_sep[-1].split('.')[0]
     model_date = url_sep[-2]
 
-    MODEL_DATE = model_date                                    # 새로운 모델 사용시 변경
-    MODEL_NAME = model_name      # 새로운 모델 사용시 변경
+    MODEL_DATE = model_date
+    MODEL_NAME = model_name
     PATH_TO_MODEL_DIR = download_model(MODEL_NAME, MODEL_DATE)
 
 
@@ -69,9 +71,10 @@ def TFOD_image (model_url, pred_pcnt):
     category_index = label_map_util.create_category_index_from_labelmap(PATH_TO_LABELS,
                                                                     use_display_name=True)
     
-
+    
     for image_path in IMAGE_PATHS:
 
+        
         print('Running inference for {}... '.format(image_path), end='')
 
         image_np = load_image_into_numpy_array(image_path)
@@ -100,8 +103,8 @@ def TFOD_image (model_url, pred_pcnt):
             max_boxes_to_draw=200,
             min_score_thresh=pred_pcnt/100,
             agnostic_mode=False)
-        st.success('작업을 마쳤습니다!')
-        return image_np_with_detections
+    
+    return image_np_with_detections
 
 ##########################################################################################
 ##########################################################################################
@@ -126,9 +129,7 @@ def TFOD_video (model_url, pred_pcnt, temp_dir):
     video_dir = 'temp'
     files = os.listdir(temp_dir)
     file_dir = video_dir +'/'+ files[0]
-    # print ('-'*15)
-    # print (video_dir)
-    # print (file_dir)
+
 
     cap = cv2.VideoCapture(file_dir) # 비디오가 위치한 경로
     category_index = label_map_util.create_category_index_from_labelmap(PATH_TO_LABELS,
@@ -147,22 +148,17 @@ def TFOD_video (model_url, pred_pcnt, temp_dir):
             20, # FPS
             (frame_width, frame_height))
         
-        # 비디오 캡쳐에서, 이미지를 1장씩 가져온다.
-        # 1장씩 가져온 이미지에서 사물탐지를 수행한다.
         while cap.isOpened() :
             ret, frame = cap.read()
 
             if ret == True:
-                # 각 프레임이 곧 이미지이며 넘파이 어레이 이므로
-                # 각 프레임을 사물 탐지 한다.
 
-                # 현재 학습 환경에서는 이미지 행렬 연산을 CPU로 처리하기 때문에 너무 느리다.
-                # 따라서 각 프레임에 대한 연산을 모두 끝낸 후, 동영상으로 다시 저장하고자 함.
                 
-                video_taker (detection_model, frame, category_index, out, pred_pcnt)   # 프레임별 작업이 끝날 떄마다 동영상 파일로 저장하는 코드
+                TFOD_video_render (detection_model, frame, category_index, out, pred_pcnt)   # 프레임별 작업이 끝날 떄마다 동영상 파일로 저장하는 코드
+                
+                
                 
             else:
                 break
-        st.success('작업을 마쳤습니다!')
         cap.release()
         out.release()
